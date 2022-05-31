@@ -21,31 +21,32 @@ class SortedList {
   max() {
     if (this.items.length === 0){
       throw new Error('EmptySortedList');
-    } else Math.floor(Math.max(this.items))
+    } else Math.max(...this.items)
   }
 
   min() {
     if (this.items.length === 0){
       throw new Error('EmptySortedList');
-    } else Math.floor(Math.min(this.items))
+    } else Math.min(...this.items)
   }
 
   sum() {
     let totalItems = 0
     for (let i= 0; i < this.items.length; i++)
     if ( this.items[i] > 0){
-      totalItems = 0 + this.items[i]
+     return totalItems = 0 + this.items[i]
     } 
-    return totalItems
+     
   }
 
   avg() {
+    
     let averageItems = 0
     for (let i=0; i < this.items.length; i++)
     if (this.items[i] > 0){
-      averageItems = this.items[i]/ this.items.length
+      return averageItems = this.items[i]/ this.items.length
     }
-    return averageItems
+    
   }
 }
 
